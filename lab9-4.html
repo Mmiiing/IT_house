@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Calculation</title>
+        <script>
+            function caculation1(){ //첫번째 줄 식 계산
+                let calc = document.getElementById("calc1_1").innerText 
+                + " + " + document.getElementById("calc1_2").innerText;
+                //dom 객체 span 태그 안의 값을 각각 가져와서 calc 변수에 식으로 저장
+                let result = eval(calc);    //eval() 함수로 식 계산
+                document.getElementById("calc1_1").innerText = result;
+                //id가 calc1_1인 span 태그 안의 값을 계산 결과로 변경
+                document.getElementById("calc1_2").innerText = result;
+                //id가 calc1_2인 span 태그 안의 값을 계산 결과로 변경
+                document.getElementById("firstCalc").innerText = result;
+                //id가 firstCalc인 span 태그 안의 값을 계산 결과로 변경
+            }
+            function caculation2(){ //두번째 줄 식 계산
+                let result = eval(document.getElementById("calc2").innerText);
+                //dom 객체 span 태그 안의 값을 읽어와서 eval() 함수로 계산
+                document.getElementById("secondCalc").innerText = result;
+                //id가 secondCalc인 span 태그 안의 값을 계산 결과로 변경
+            }
+            function caculation3(){ //세번째 줄 식 계산
+                let result = eval(document.getElementById("calc3").innerText);
+                //dom 객체 span 태그 안의 값을 읽어와서 eval() 함수로 계산
+                document.getElementById("thirdCalc").innerText = result;
+                //id가 thirdCalc인 span 태그 안의 값을 계산 결과로 변경
+            }
+        </script>
+    </head>
+    <body>
+        <h3>계산해봅시다</h3>
+        <hr>
+        <span id="calc1_1">2</span> + <span id="calc1_2">4</span> 
+        = <span id="firstCalc" onclick="caculation1()">답</span><br>
+        <span id="calc2">4 * 20 + 64</span> = <span id="secondCalc" 
+        onclick="caculation2()">답</span><br>
+        <span id="calc3">20 / 5 - 8 * 2</span> = <span id="thirdCalc" 
+        onclick="caculation3()">답</span><br>
+    </body>
+</html>
