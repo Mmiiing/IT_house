@@ -1,0 +1,13 @@
+<html>
+    <meta charset="utf-8">
+    <head><title>이미지 교체</title></head>
+
+    <body>
+        <img name="image_1" src="sample.jpg" border=3 align=bottom hspace=2 vspace=4 alt="샘플" onclick="changeImage('D.jpg')">
+        <script language="javascript">
+            function changeImage(path){
+                document.image_1.src = path;
+            }
+        </script>
+    </body>
+</html>

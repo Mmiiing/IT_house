@@ -1,0 +1,35 @@
+<html>
+    <head><title>Image 객체 1</title></head>
+    <body>
+        <img name="image_1" src="sample.jpg" border=3 align=bottom hspace=2 vspace=4 alt="샘플">
+        <img name="image_2" src="D.jpg" border=3 align=bottom alt="D"><br><br>
+        <script language="JavaScript">
+            <!--
+            document.write("이미지 개수 : " + document.images.length + "<br>");
+            document.write("이미지 이름 : " + document.image_1.name + "<br>");
+            document.write("이미지 URL : " + document.image_1.src + "<br>");
+            document.write("이미지 너비 : " + document.image_1.width + "<br>");
+            document.write("이미지 높이 : " + document.image_1.height + "<br>");
+            document.write("이미지 너비 여백 : " + document.image_1.hspace + "<br>");
+            document.write("이미지 높이 여백 : " + document.image_1.vspace + "<br>");
+            document.write("이미지 정렬 상태 : " + document.image_1.align + "<br>");
+            document.write("이미지 외곽선 굵기 : " + document.image_1.border + "<br>");
+            document.write("이미지 설명 : " + document.image_1.alt + "<br>");
+
+            document.writeln("<p>", "=== 이미지 정보 배열로 접근하기===" + "<p>");
+            for(i=0;i<document.images.length;i++){
+                document.write("이미지 개수 : " + document.images[i].length + "<br>");
+                document.write("이미지 이름 : " + document.images[i].name + "<br>");
+                document.write("이미지 URL : " + document.images[i].src + "<br>");
+                document.write("이미지 너비 : " + document.images[i].width + "<br>");
+                document.write("이미지 높이 : " + document.images[i].height + "<br>");
+                document.write("이미지 너비 여백 : " + document.images[i].hspace + "<br>");
+                document.write("이미지 높이 여백 : " + document.images[i].vspace + "<br>");
+                document.write("이미지 정렬 상태 : " + document.images[i].align + "<br>");
+                document.write("이미지 외곽선 굵기 : " + document.images[i].border + "<br>");
+                document.write("이미지 설명 : " + document.images[i].alt + "<br>");
+            }
+            //-->
+        </script>
+    </body>
+</html>

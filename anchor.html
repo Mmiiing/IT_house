@@ -1,0 +1,23 @@
+<html>
+    <meta charset="utf-8">
+    <head><title>Anchors 객체</title></head>
+
+    <body>
+        <a href="#list1">1장으로 위치이동</a><br>
+        <a href="#list2">2장으로 위치이동</a>
+        <hr>
+        <a name="list1">1장입니다.</a>
+        <a name="list2">2장입니다.</a>
+        <hr>
+
+        <script language="javascript">
+            <!--
+                var anch_cnt = document.anchors.length;
+                document.write("앵커갯수 : " + anch_cnt + "<br>");
+                for(i=0;i<anch_cnt;i++){
+                    document.write("["+i+"]" + document.anchors[i].name + "<br>");
+                }
+            //-->
+        </script>
+    </body>
+</html>

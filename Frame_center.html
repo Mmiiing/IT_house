@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<HTML> 
+	
+<HEAD> 
+	<SCRIPT LANGUAGE="JavaScript"> 
+		function text_input() {
+		//alert("jaja0");
+		//document.write("hahaha");
+                        
+		var strName = parent.frames['frm1'].document.form.name.value;
+                   //var strName = document;
+		alert("jaja1: " + strName);
+		var strAge = parent.frames[0].document.form.age.value;
+		alert("jaja2: " + strAge);
+        var strTest = parent.frames['frm1'].document.form.bbb.value;
+		alert("jaja3: " + strTest);
+
+		var strValue = "";
+		strValue += "이름 : " + strName + "</br>";
+		strValue += "나이 : " + strAge + "</br>";
+        strValue += "변경 : " + strTest + "</br>";
+		strValue += "<hr>";
+		document.getElementById("result").innerHTML += strValue;
+		}
+       
+	</SCRIPT>
+</HEAD>
+
+<BODY>
+ 두번째 프레임
+	<form name="form1">
+	     <Input type="button" NAME="ccc" VALUE="입력" onClick="text_input()">
+	</form>
+
+	<div id="result"></div>
+</BODY>
+</HTML>
+
