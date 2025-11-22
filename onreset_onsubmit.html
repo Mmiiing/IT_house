@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>폼의 리셋과 서브밋 리스너</title>
+        <script>
+            function onResetHandler(){
+                let isConfirmed = confirm("폼을 리셋하시겠습니까?");
+                if(!isConfirmed){
+                    return false;
+                }
+                alert("폼이 리셋되었습니다.");
+            }
+
+            function onSubmitHandler(){
+                let isConfirmed = confirm("폼을 서브밋하시겠습니까?");
+                if(!isConfirmed){
+                    return false;
+                }
+                alert("폼이 서브밋되었습니다.");
+            }
+        </script>
+        <body>
+            <h3>폼의 리셋, 서브밋 리스너</h3>
+            <form onreset="return onResetHandler()" onsubmit="return onSubmitHandler()">
+                ID: <input type="text"><br>
+                PW: <input type="password"><br>
+                <input type="reset" value="리셋">
+                <input type="submit" value="서브밋"> 
+            </form>
+        </body>
+    </head>
+</html>
