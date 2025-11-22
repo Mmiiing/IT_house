@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>이벤트 객체의 target</title>
+        <script>
+            function change(e){
+                let liFontSize = parseFloat(    //이벤트 발생 li 의 FontSize
+                    window.getComputedStyle(e.target).fontSize);
+                let parentFontSize = parseFloat( //li의 부모 ul 객체의 FontSize(16px)
+                    window.getComputedStyle(e.target.parentElement).fontSize);
+                let em = liFontSize/parentFontSize; //em 계산
+                if(em === 1)    //em 이 1일 경우 1.3em 으로 변경
+                    e.target.style.fontSize = "1.3em";
+                else    //em 이 1.3일 경우 1.0em 으로 변경
+                    e.target.style.fontSize = "1.0em";
+            }
+        </script>
+    </head>
+    <body>
+        <h3>아이템을 클릭하면 1.3배 크기로</h3>
+        <hr>
+        <p>여름 방학 때 하고 싶은 것들</p>
+        <ul onclick="change(event)">
+            <li>자전거로 대한민국 일주</li>
+            <li>책 100권 읽기</li>
+            <li>철인 3종 경비 준비</li>
+            <li>자바스크립트 정복</li>
+        </ul>
+    </body>
+</html>

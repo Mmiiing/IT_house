@@ -5,21 +5,19 @@
         <a href="http://www.daum.net" target="_blank">다음</a><br>
         <a href="http://www.naver.com" target="_blank">네이버</a><br>
         <a href="http://www.google.com" target="_blank">구글</a><br>
+        <a href="Link.html" target="_blank">현재 페이지로 이동</a>
 
         <script language="JavaScript">
             <!--
-            document.write("링크 개수 : " + document.links.length + "<br>");
-            document.write("첫 번째 링크 URL : " + document.links[0].href + "<br>");
-            document.write("첫 번째 링크 대상 : " + document.links[0].target + "<br>");
-            document.write("첫 번째 링크 텍스트 : " + document.links[0].text + "<br><br>");
+            document.write("링크 개수 : " + document.links.length + "<br><hr>");
 
             for(i=0;i<document.links.length;i++){
+                document.write((i+1) + "번째 링크 URL : " + document.links[i].pathname + "<br>");
                 document.write((i+1) + "번째 링크 URL : " + document.links[i].href + "<br>");
                 document.write((i+1) + "번째 링크 대상 : " + document.links[i].target + "<br>");
-                document.write((i+1) + "번째 링크 텍스트 : " + document.links[i].text + "<br><br>");
+                document.write((i+1) + "번째 링크 텍스트 : " + document.links[i].text + "<br><hr>");
             }
             //-->
         </script>
     </body>
-
 </html>

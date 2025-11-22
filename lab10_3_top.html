@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+    <head>
+        <script language="javascript">
+            function change(){
+                alert(form.bbb.value);
+                form.bbb.value = form.bbb.value - 1;
+                parent.frames['frm2'].document.location.reload();
+            }
+        </script>
+    </head>
+    <body>
+        <form name="form">
+            첫번째 프레임<br>
+            이름 : <input type="text" name="name"><br>
+            나이 : <input type="text" name="age"><br>
+            변경 : <input type="button" name="bbb" value="10" onclick="change()">
+        </form>
+    </body>
+</html>
