@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Private property</title>
+        <script>
+            /*
+            //정사각형 클래스
+            class Square{
+                constructor(length){
+                    if(length <= 0){
+                        throw '길이는 0보다 커야 합니다.' //throw 키워드로 강제로 오류를 발생 시킴
+                    }
+                    this.length = length
+                }
+
+                getPerimeter(){ return 4 * this.length}
+                getArea(){ return this.length * this.length}
+            }
+
+            //클래스 사용
+            const square = new Square(10)
+            console.log(`정사각형의 둘레: ${square.getPerimeter()}`)
+            console.log(`정사각형의 넓이: ${square.getArea()}`)
+            */ //위 코드로는 length 속성에 직접 접근하여 값을 변경할 수 있음
+
+            //그러니 private 속성으로 선언해야함
+            class Square{
+                #length //private 속성으로 선언
+                constructor(length){
+                    if(length <= 0){
+                        throw '길이는 0보다 커야 합니다.' //throw 키워드로 강제로 오류를 발생 시킴
+                    }
+                    this.length = length
+                }
+
+                get length(){ return this.#length }
+                set length(length){
+                    if(length <= 0){
+                        throw '길이는 0보다 커야 합니다.'
+                    }
+                    this.#length = length
+                }
+
+                get perimeter(){ return 4 * this.#length}
+                get area(){ return this.#length * this.#length}
+            }
+
+            //클래스 사용
+            const square = new Square(10)
+            square.length = 5 //private 속성이므로 외부에서 접근 불가
+            console.log(`정사각형의 둘레: ${square.perimeter}`)
+            console.log(`정사각형의 넓이: ${square.area}`)
+        </script>
+    </head>
+</html>

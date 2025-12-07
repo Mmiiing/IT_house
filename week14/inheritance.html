@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Inheritance</title>
+        <script>
+            //사각형 클래스
+            class Rectangle{
+                constructor(width, height){
+                    this.width = width
+                    this.height = height
+                }
+
+                //사각형의 둘레를 구하는 메소드
+                getPerimeter(){
+                    return 2 * (this.width + this.height)
+                }
+
+                getArea(){
+                    return this.width * this.height
+                }
+            }
+
+            //정사각형 클래스
+            class Square extends Rectangle{
+                constructor(length){
+                    super(length, length)
+                }
+            }
+
+            const square = new Square(1)
+            console.log(`정사각형의 둘레: ${square.getPerimeter()}`)
+            console.log(`정사각형의 넓이: ${square.getArea()}`)
+        </script>
+    </head>
+</html>

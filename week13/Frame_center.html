@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<HTML> 
+	
+<HEAD> 
+	<SCRIPT LANGUAGE="JavaScript">
+		function test_click(){
+		parent.frames['frm1'].document.form.bbb.click();
+		}
+	</SCRIPT>
+</HEAD>
+
+<BODY>
+ frame center
+
+	<form name="form1">
+	     <Input type="button" NAME="ccc" VALUE="입력" onClick="test_click()">
+	</form>
+</BODY>
+</HTML>
+
